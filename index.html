@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script src="https://kit.fontawesome.com/5817f315db.js" crossorigin="anonymous"></script>
+	
+	<title>ThunderGG</title>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	    <a class="navbar-brand logo-font" href="#">ThunderGG</a>
+	    <!-- links toggle -->
+	    <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#links" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <!-- account toggle --> 
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#account" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	    <i class="fa fa-user"></i>
+	    </button>
+
+	    <div class="collapse navbar-collapse" id="links">
+	      <ul class="navbar-nav mr-auto">
+	        <li class="nav-item active">
+	          <a class="nav-link">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="layouts/esportsbetting.html">Esports betting</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="layouts/news.html">News</a>
+	        </li>
+	      </ul>
+	      </div>
+	      <div class="collapse navbar-collapse" id="account">
+	      <ul class="navbar-nav ml-auto" id="navbarUser">
+
+	      </ul>
+	    </div>
+	</nav>
+
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	    		<!-- Login Modal -->
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+					 	<div class="form-group">
+					 		<div id="message"></div>
+					    	<label for="username">Username</label>
+					    	<input type="text" class="form-control" id="username" name="username" aria-describedby="userHelp" placeholder="Username">
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="password">Password</label>
+					    	<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+					  	</div>
+					</form>
+					<button class="btn btn-primary" name="btnSubmit" id="btnSubmit" onclick="login($('#username').val(),$('#password').val())">Submit</button>
+				</div>
+				<div class="modal-footer align-self-center">
+					Not have an account yet?
+					<!--<a data-dismiss="modal" href="#"> Sign Up</a>-->
+				</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- Main -->
+	<div class="d-md-flex p-0 mt-5 pt-2">
+		<p>Home Page</p>
+	</div>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+   	<script src="assets/js/bootstrap-input-spinner.js"></script>
+   	<script src="app.js"></script>
+   	<script>$("input[type='number']").inputSpinner()</script>
+<!-- End Main -->
+</body>
+</hstml>

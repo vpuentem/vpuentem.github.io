@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+	<script src="https://kit.fontawesome.com/5817f315db.js" crossorigin="anonymous"></script>
+	
+	<title>ThunderGG</title>
+</head>
+<body>
+
+	<!-- NAVBAR TOP -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top border-dark">
+	    <a class="navbar-brand logo-font" href="#">ThunderGG</a>
+	    <!-- links toggle -->
+	    <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#links" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <!-- account toggle --> 
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#account" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	    <i class="fa fa-user"></i>
+	    </button>
+
+	    <div class="collapse navbar-collapse" id="links">
+		    <ul class="navbar-nav mr-auto">
+		        <li class="nav-item">
+		          	<a class="nav-link" href="../index.html">Home</a>
+		        </li>
+		        <li class="nav-item active">
+		          	<a class="nav-link" href="esportsbetting.html">Esports betting</a>
+		        </li>
+		        <li class="nav-item">
+		          	<a class="nav-link" href="news.html">News</a>
+		        </li>
+		    </ul>
+		</div>
+      	<div class="collapse navbar-collapse" id="account">
+	      	<ul class="navbar-nav ml-auto" id="navbarUser"></ul>
+   	 	</div>
+	</nav>
+
+	<!-- NAVBAR BOTTOM -->
+	<nav class="navbar fixed-bottom d-flex">
+        <div class="container justify-content-around">
+	    	<div class="col-1-3 d-flex flex-column text-center">
+	    		<a class="" href="esportsbetting.html">
+					<div class="">
+						<img src="../assets/img/icons-svg/matches.svg">
+					</div>
+					<div class="">Matches</div>
+				</a>
+	      	</div>
+	      	<div class="col-1-3 d-flex flex-column text-center">
+	    		<a class="" href="betslip.html">
+					<div class="">
+						<img src="../assets/img/icons-svg/trophy.svg">
+					</div>
+					<div class="">Bet Slip</div>
+				</a>
+	      	</div>
+	      	<div class="col-1-3 d-flex flex-column text-center">
+	    		<div class="active">
+					<div class="">
+						<img src="../assets/img/icons-svg/activity.svg">
+					</div>
+					<div class="">Active Bets</div>
+				</div>
+	      	</div>
+	  </div>
+    </nav>
+
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	    		<!-- Login Modal -->
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+					 	<div class="form-group">
+					 		<div id="message"></div>
+					    	<label for="username">Username</label>
+					    	<input type="text" class="form-control" id="username" name="username" aria-describedby="userHelp" placeholder="Username">
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="password">Password</label>
+					    	<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+					  	</div>
+					</form>
+					<button class="btn btn-primary" name="btnSubmit" id="btnSubmit" onclick="login($('#username').val(),$('#password').val())">Submit</button>
+				</div>
+				<div class="modal-footer align-self-center">
+					Not have an account yet?
+					<!--<a data-dismiss="modal" href="#"> Sign Up</a>-->
+				</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- Main Content-->
+	<div class="container-fluid d-md-flex p-0 background-dark">
+
+		<!-- Bet slip container -->
+		
+		<div class="scrollDiv w-100 container-pb">
+			<div class="px-md-4">
+				
+			
+				<div class="betslipContainer row align-items-around">
+				    
+				    <div class="col-md-6 px-5 px-md-2">
+				        <div class="card text-left mt-2">
+						  	<div class="card-header py-1 px-2">
+						    	<div class="betslipTitle">SuperBoomFan - Kurabba</div>
+						    	<div class="text-sm">Winner of the match</div>
+						  	</div>
+						  	<div class="card-body p-0">
+						  		<div class="d-flex py-2">
+								  	<div class="betslipChoice px-2 w-50">SuperBoomFan</div>
+								  	<div class="betslipData px-2 w-50">
+								  		<img src="../assets/img/icons-svg/user.svg">
+								  		<span>90%</span>
+								  		<img src="../assets/img/icons-svg/pot.svg">
+								  		<span>30%</span>
+								  	</div>
+								</div>
+								<div class="d-flex flex-row">
+								  	<div class="px-2 w-50">Your bet:</div>
+								  	<div class="px-2 w-50 pb-2 betslipData"><img src="../assets/img/icons-svg/pot.svg"><span class="pl-1">500</span></div>
+								</div>
+								
+							</div>
+				    	</div>
+				    </div>
+				    
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+   	<script src="../app.js"></script>
+<!-- End Main -->
+</body>
+</hstml>
